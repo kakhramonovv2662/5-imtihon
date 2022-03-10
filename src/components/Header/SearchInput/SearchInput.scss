@@ -1,0 +1,36 @@
+.search {
+  display: flex;
+  align-items: center;
+
+  &__input {
+    max-width: 220px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #474747;
+    background: #f4f4f4;
+    border-radius: 3px;
+    padding: 12px 14px;
+    border: none;
+    cursor: pointer;
+
+    &:focus {
+      border: none;
+    }
+  }
+
+  &__icon {
+    padding: 12px;
+    background: #ffba9d;
+    border-radius: 3px;
+  }
+}
+
+@media only screen and (max-width: 601px) {
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
