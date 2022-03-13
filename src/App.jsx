@@ -1,14 +1,19 @@
 import React from "react";
-import Header from "./components/Header/Header";
+import { Route, Routes } from "react-router-dom";
+import About from "./pages/About";
+import Home from "./pages/Home";
 
 //scss
 import "./App.scss";
 
 function App() {
   return (
-    <>
-      <Header />
-    </>
+    <div className="container">
+      <Routes>
+        <Route path="/*" element={<Home />} />
+        <Route path="/about/:postId" element={<About />} />
+      </Routes>
+    </div>
   );
 }
 

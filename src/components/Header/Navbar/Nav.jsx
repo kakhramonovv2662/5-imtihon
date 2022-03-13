@@ -12,7 +12,7 @@ export default function Navbar() {
             className={(props) =>
               props.isActive ? "link_active " : "nav__link"
             }
-            to="/home"
+            to="/all"
           >
             All
           </NavLink>

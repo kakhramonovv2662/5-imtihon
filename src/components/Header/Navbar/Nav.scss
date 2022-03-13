@@ -29,6 +29,12 @@
   border-bottom: 1px solid #777777;
 }
 
+@media only screen and (max-width: 1002px) {
+  .nav {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 769px) {
   .nav {
     display: none;

@@ -1,0 +1,16 @@
+.main {
+  display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    display: block;
+  }
+}
+@media only screen and (max-width: 426px) {
+  .main {
+    &__users {
+      display: block;
+    }
+  }
+}

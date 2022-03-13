@@ -1,0 +1,147 @@
+.footer {
+  width: 1300px;
+  margin-left: 0;
+
+  &__contents {
+    display: flex;
+    align-items: start;
+    color: #fff;
+    background-color: black;
+    padding: 30px;
+    position: relative;
+    z-index: 10;
+    left: -100px;
+    background-image: url("./img/footer-bg-img.svg");
+    background-repeat: no-repeat;
+    background-size: 590px 250px;
+    background-position: 50px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 150px;
+    margin-left: 150px;
+  }
+
+  &__name {
+    font-family: "Gilroy";
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 42px;
+    color: #fff;
+    margin-left: 15px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 10px;
+    margin-right: 60px;
+  }
+
+  &__link {
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid transparent;
+  }
+
+  &__contact {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+}
+
+.itemActiveLink {
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #fff;
+}
+
+@media only screen and (max-width: 769px) {
+  .footer {
+    width: 830px;
+    margin-left: 0;
+    &__contents {
+      display: block;
+      background-image: none;
+    }
+
+    &__wrapper {
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+
+    &__list {
+      margin-bottom: 50px;
+    }
+
+    &__title {
+      margin-left: 240px;
+    }
+
+    &__link {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__contact {
+      margin-left: 300px;
+    }
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .footer {
+    width: 495px !important;
+    margin-left: 0;
+    // padding-right: 465px;
+
+    &__wrapper {
+      margin-left: 0;
+    }
+
+    &__title {
+      margin-left: 50px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 27px;
+    }
+
+    &__link {
+      margin-left: 50px;
+    }
+
+    &__contact {
+      margin-left: 50px;
+    }
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .footer {
+    width: 445px !important;
+
+    &__wrapper {
+      margin-left: 50px;
+    }
+  }
+}
+@media only screen and (max-width: 321px) {
+  .footer {
+    width: 390px !important;
+
+    &__wrapper {
+      margin-left: 100px;
+    }
+  }
+}

@@ -2,12 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
+import { ContextProvider } from "./context/AuthContext";
+import { SearchProvider } from "./context/SearchContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <ContextProvider>
+      <SearchProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </SearchProvider>
+    </ContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

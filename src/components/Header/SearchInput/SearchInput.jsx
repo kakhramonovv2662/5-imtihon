@@ -1,14 +1,25 @@
 //img
+import { useRef } from "react";
+import SearchHooks from "../../../Hooks/SearchHooks";
 import SearchIcon from "../images/search-input.svg";
 
 //scss
 import "./SearchInput.scss";
 
 export default function SearchInput() {
+  const [, setSearch] = SearchHooks();
+  const searchInput = useRef();
+
   return (
     <>
-      <div className="search">
-        <input className="search__input" type="search" placeholder="Search" />
+      <form className="search">
+        <input
+          ref={searchInput}
+          onChange={(evt) => setSearch(evt.target.value)}
+          className="search__input"
+          type="search"
+          placeholder="Search"
+        />
         <img
           className="search__icon"
           src={SearchIcon}
@@ -16,7 +27,7 @@ export default function SearchInput() {
           width="38px"
           height="38px"
         />
-      </div>
+      </form>
     </>
   );
 }
