@@ -14,7 +14,7 @@ export default function Users({ className }) {
   const [error, setError] = useState(false);
   const [pageCount, setPageCount] = useState(0);
   const [user, setUser] = UseHooks();
-  const [search, setSearch] = SearchHooks();
+  const [search] = SearchHooks();
 
   useEffect(() => {
     const getPosts = async () => {
@@ -56,7 +56,7 @@ export default function Users({ className }) {
           <h2 className="user__post-title">Recent Post</h2>
           {user
             .filter((user) => {
-              if (search == "") {
+              if (search === "") {
                 return user;
               } else if (
                 user.title.toLowerCase().includes(search.toLowerCase())
